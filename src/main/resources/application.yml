@@ -1,0 +1,20 @@
+server:
+  port: 8877
+
+spring:
+  application:
+    name: ai-orchestrator-service
+  config:
+    import: "optional:configserver:http://localhost:8888"
+  ai:
+    openai:
+      api-key: ${OPEN_AI_KEY}
+      chat:
+        options:
+          model: gpt-5.4-nano
+          max-tokens: 100
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
