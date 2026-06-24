@@ -26,5 +26,10 @@ public class HealthController {
     public Mono<List<String>> test() {
         return productClient.searchProducts("iPhone");
     }
+
+    @PostMapping("/ask")
+    public String ask(@RequestBody String prompt) {
+        return aiService.ask(prompt);
+    }
     
 }
