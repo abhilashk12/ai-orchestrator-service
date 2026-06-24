@@ -14,10 +14,10 @@ public class WebClientConfig {
         return WebClient.builder();
     }
 
-    @Bean
-    @LoadBalanced
-    public WebClient.Builder webClientBuilderNext() {
-        return WebClient.builder();
-    }
+    // @Bean
+    // @LoadBalanced
+    // public WebClient.Builder webClientBuilderNext() {
+    //     return WebClient.builder();
+    // }
     
 }
